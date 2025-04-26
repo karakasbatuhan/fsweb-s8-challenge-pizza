@@ -1,0 +1,76 @@
+
+.order-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .order-form-container header {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .order-form-container form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .order-form-container form div {
+    margin-bottom: 20px;
+  }
+  
+  .order-form-container input[type="text"],
+  .order-form-container textarea,
+  .order-form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
+  .order-form-container input[type="checkbox"],
+  .order-form-container input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  .order-form-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffc107;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    width: 32px;
+    height: 32px;
+  }
+  
+  @media (max-width: 768px) {
+    .order-form-container {
+      padding: 10px;
+    }
+  
+    .order-form-container form {
+      padding: 10px;
+    }
+  
+    .order-form-container h1,
+    .order-form-container h2 {
+      font-size: 22px;
+    }
+  
+    .quantity-controls {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
