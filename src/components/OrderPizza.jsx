@@ -14,7 +14,7 @@ function OrderPizza({ navigateTo, setOrderData }) {
 
   const toppingOptions = [
     "Pepperoni", "Sosis", "Kanada Jambonu", "Tavuk Izgara",
-    "Soğan", "Domates", "Mısır", "Jalepeno", 
+    "Soğan", "Domates", "Mısır", "Jalepeno", "Sucuk", 
     "Sarımsak", "Biber", "Sucuk", "Ananas", "Kabak"
   ];
 
@@ -72,7 +72,7 @@ function OrderPizza({ navigateTo, setOrderData }) {
     if (!isFormValid()) {
       return;
     }
-  
+
     axios.post("https://reqres.in/api/pizza", formData)
       .then((response) => {
         console.log("Sipariş Başarılı:", response.data);
@@ -85,95 +85,118 @@ function OrderPizza({ navigateTo, setOrderData }) {
         navigateTo('success');
       });
   };
-  
+
 
   return (
-    <div className="order-form-container">
-      <header className="hero">
-        <h1>Teknolojik Yemekler</h1>
-      </header>
+    <div className="orderPage">
 
-      <div className="product-info">
-        <h2>Position Absolute Acı Pizza</h2>
-        <p><strong>85.50₺</strong></p>
-        <p>
-          Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
-          Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel odun ateşiyle...
-        </p>
+      <div className="mainMenu">
+          <img src="/images/iteration-1-images/logo.svg" alt="Teknolojik Yemekler" className="logo" />
+          <h4 className="pageAdress">Anasayfa - <b>Sipariş Oluştur</b></h4>
+      </div>    
+
+      <div className="order-form-container">    
+        <div className="product-info">
+          <h2>Position Absolute Acı Pizza</h2>
+          <p><strong>85.50₺</strong></p>
+          <p>
+            Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
+            Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlark, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
+          </p>
+        </div>  
+
+
+          <div className="sizeAndDoughFormGroup">
+            <div className = "sizeFormGroup">
+              <label>Boyut Seç <b>*</b></label><br/>
+              <label><input type="radio" name="size" value="Küçük" onChange={handleChange} checked={formData.size === "Küçük"} /> Küçük</label><br/>
+              <label><input type="radio" name="size" value="Orta" onChange={handleChange} checked={formData.size === "Orta"} /> Orta</label><br/>
+              <label><input type="radio" name="size" value="Büyük" onChange={handleChange} checked={formData.size === "Büyük"} /> Büyük</label>
+            </div>
+            <div className="doughFormGroup">
+            <label>Hamur Seç <b>*</b></label><br/>
+            <select name="dough" onChange={handleChange} value={formData.dough}>
+              <option value="">Hamur Kalınlığı</option>
+              <option value="İnce">İnce</option>
+              <option value="Orta">Orta</option>
+              <option value="Kalın">Kalın</option>
+            </select>
+          </div>
+          </div>
+
+          
+
+          <div className="extrasFormGroup">
+            <div className ="infoExtras">
+              <label><b>Ek Malzemeler:</b></label><br/>
+              <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+            </div>
+
+            <div className = "toppings">
+            {toppingOptions.map(topping => (
+              
+              <label key={topping}>
+                
+                <input 
+                  type="checkbox" 
+                  value={topping}
+                  checked={formData.toppings.includes(topping)}
+                  onChange={handleChange}
+                /> {topping}                
+              </label>              
+            ))}
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit}>
+          <div className="nameFormGroup">
+            <label>İsim</label>
+            <input 
+              type="text" 
+              name="name" 
+              value={formData.name}
+              onChange={handleChange}
+              minLength="3"
+              required
+              placeholder="Lütfen isminizi giriniz"
+            />
+          </div>
+
+          <div className="specialNoteFormGroup">
+            <label>Sipariş Notu</label>
+            <textarea 
+              name="specialNote"
+              value={formData.specialNote}
+              onChange={handleChange}
+              placeholder="Siparişine eklemek istediğin bir not var mı?"
+            />
+          </div>
+
+            <hr />
+          <div className="orderSummaryFormGroup">
+            <div className="quantityControlsFormGroup">
+              <button type="button" className="decrease" onClick={() => handleQuantityChange(-1)}>-</button>
+              <span>{formData.quantity}</span>
+              <button type="button" className="increase" onClick={() => handleQuantityChange(1)}>+</button>
+            </div>
+
+            <div className="formSummary">
+              <div className="priceSummary">
+                <span><strong>Sipariş Toplamı</strong></span>
+                <p className="extraPrice">Seçimler: {formData.toppings.length * toppingPrice}₺</p>
+                <p className="totalPrice">Toplam Tutar: {calculateTotal().toFixed(2)}₺</p>
+              </div>
+              <button type="submit" disabled={!isFormValid()} className="order-submit-button">
+            SİPARİŞ VER
+          </button>
+            </div>
+          </div> 
+            
+
+          
+
+        </form>
       </div>
-
-      <form onSubmit={handleSubmit}>
-        
-        <div className="form-group">
-          <label>İsim:</label>
-          <input 
-            type="text" 
-            name="name" 
-            value={formData.name}
-            onChange={handleChange}
-            minLength="3"
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Boyut Seç:</label><br/>
-          <label><input type="radio" name="size" value="Küçük" onChange={handleChange} checked={formData.size === "Küçük"} /> Küçük</label><br/>
-          <label><input type="radio" name="size" value="Orta" onChange={handleChange} checked={formData.size === "Orta"} /> Orta</label><br/>
-          <label><input type="radio" name="size" value="Büyük" onChange={handleChange} checked={formData.size === "Büyük"} /> Büyük</label>
-        </div>
-
-        <div className="form-group">
-          <label>Hamur Seç:</label><br/>
-          <select name="dough" onChange={handleChange} value={formData.dough}>
-            <option value="">Hamur Kalınlığı Seç</option>
-            <option value="İnce">İnce</option>
-            <option value="Orta">Orta</option>
-            <option value="Kalın">Kalın</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label>Ek Malzemeler:</label><br/>
-          {toppingOptions.map(topping => (
-            <label key={topping} style={{ display: "block" }}>
-              <input 
-                type="checkbox" 
-                value={topping}
-                checked={formData.toppings.includes(topping)}
-                onChange={handleChange}
-              /> {topping}
-            </label>
-          ))}
-        </div>
-
-        <div className="form-group">
-          <label>Sipariş Notu:</label><br/>
-          <textarea 
-            name="specialNote"
-            value={formData.specialNote}
-            onChange={handleChange}
-            placeholder="Siparişine eklemek istediğin bir not var mı?"
-          />
-        </div>
-
-        <div className="form-group quantity-controls">
-          <label>Adet:</label><br/>
-          <button type="button" onClick={() => handleQuantityChange(-1)}>-</button>
-          <span>{formData.quantity}</span>
-          <button type="button" onClick={() => handleQuantityChange(1)}>+</button>
-        </div>
-
-        <div className="form-summary">
-          <p>Ekstra Malzeme Tutarı: {formData.toppings.length * toppingPrice}₺</p>
-          <p><strong>Toplam Tutar: {calculateTotal().toFixed(2)}₺</strong></p>
-        </div>
-
-        <button type="submit" disabled={!isFormValid()} className="order-submit-button">
-          SİPARİŞ VER
-        </button>
-
-      </form>
     </div>
   );
 }
