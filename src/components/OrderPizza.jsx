@@ -98,7 +98,13 @@ function OrderPizza({ navigateTo, setOrderData }) {
       <div className="order-form-container">    
         <div className="product-info">
           <h2>Position Absolute Acı Pizza</h2>
-          <p><strong>85.50₺</strong></p>
+          <div className="priceAndUserRatings">
+            <p><strong>85.50₺</strong></p>
+              <div className="userRatings">
+                <p>4.9</p>
+                <p>(200)</p>
+              </div>
+          </div>
           <p>
             Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
             Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlark, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
@@ -190,11 +196,7 @@ function OrderPizza({ navigateTo, setOrderData }) {
             SİPARİŞ VER
           </button>
             </div>
-          </div> 
-            
-
-          
-
+          </div>      
         </form>
       </div>
     </div>

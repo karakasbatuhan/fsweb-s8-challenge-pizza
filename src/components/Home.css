@@ -20,6 +20,13 @@ html, body {
   overflow: hidden;  
 }
 
+.elements{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 106.99px;
+}
+
 .home-content {
   position: absolute;
   top: 18%; 
@@ -61,6 +68,9 @@ html, body {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 193.265625px;
+  height: 56px;
+
 }
 
 .order-button:hover {
@@ -70,8 +80,12 @@ html, body {
 @media (max-width: 768px) {
   html, body {
     background-attachment: scroll;
-    background-size: unset;
-    background-position: center top;
+    background-size:unset;
+    background-position:top center;
+  }
+
+  .elements{
+    
   }
 
   .home-content {
@@ -85,12 +99,11 @@ html, body {
   }
 
   .hero-title {
-    height: 368px;
     font-family: Roboto Condensed;
     font-weight: 300;
     font-size: 86px;
     line-height: 92px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
