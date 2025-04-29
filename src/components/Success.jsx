@@ -3,14 +3,16 @@ import "./Success.css";
 
 function Success({ orderData }) {
   return (
-    <div className="success-container">
-      <div className="elementLogo">
-          <img src="/images/iteration-1-images/logo.svg" alt="Teknolojik Yemekler" className="logo" />
+    <main>
+      <div className="success-container">
+        <div className="elementLogo">
+            <img src="/images/iteration-1-images/logo.svg" alt="Teknolojik Yemekler" className="logo" />
+        </div>
+        <div className="elementMessage">
+            <h1 className="hero-title">TEBKRİLER!<br />SİPARİŞİNİZ ALINDI</h1>          
+        </div>
       </div>
-      <div className="elementMessage">
-          <h1 className="hero-title">TEBKRİLER!<br />SİPARİŞİNİZ ALINDI</h1>          
-      </div>
-    </div>
+    </main>
 );
   } 
 

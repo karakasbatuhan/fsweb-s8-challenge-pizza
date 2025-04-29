@@ -4,30 +4,22 @@
   /*border: 1px solid purple;*/
 }
 
-#root{
+#root{ /*Sayfanın tamamı için temel kodlar*/
+  margin: 0px;
   padding: 0px;  
   width: 100%;
-  max-width: 100%;
+  height: 100%;
+  max-width: 100%;  
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;  
-}
-
-.orderPage{
+.orderPage{ /*Sadece bu sayfa özelinde geçerli olan temel kodlar*/
   width: 100%;
   height: 100vh;
-  position: relative;
-  overflow: hidden;   
-  background-color: white;
   overflow: scroll;
+  background-color: white;
 }
 
-.mainMenu{
-  border: 1px solid white;
+.mainMenu{ /*Logo ve sayfa lokasyonunu içeren ana menü*/
   height: 207px;
   display: flex;
   flex-direction: column;
@@ -36,24 +28,35 @@ html, body {
   background-color: #CE2829;
 }
 
-.pageAdress{
+.pageAdress{ /*Ana menü de sayfa lokasyonu*/
   color: white; 
   margin-right: 352px;  
-  font-weight: normal;
+  font-weight: normal;  
 }
 
-.product-info h2{
+main{ /*Ana menü hariç sayfanın tamamı*/
+  display: flex;
+  justify-content: space-around;
+}
+
+.order-form-container { /*Sayfa içinde içeriklerin bulunacağı bölüm*/
+  max-width: 532px;
+  padding: 20px;
+}
+
+.product-info h2{ /*İçerik başlığımız*/
   text-align: left;
 }
 
-.product-info p{
-  text-align: left;
-  font-family: Barlow;
-  font-size: 16px;
-  line-height: 28.8px;
+.priceAndUserRatings{ /*Fiyat ve puanlandırma kısmı*/
+  display: flex;
+  flex-direction: row;
+  width: 531.0000610351562px;
+  height: 37px;
+  justify-content: space-between;
 }
 
-.priceAndUserRatings p:first-of-type{
+.priceAndUserRatings p:first-of-type{ /*Bu div ve userRatings divinin içinde ki ilk p elementi için*/
   width: 106px;
   height: 37px;
   top: 308px;
@@ -65,15 +68,7 @@ html, body {
   margin-top: 0px;
 }
 
-.priceAndUserRatings{
-  display: flex;
-  flex-direction: row;
-  width: 531.0000610351562px;
-  height: 37px;
-  justify-content: space-between;
-}
-
-.userRatings{
+.userRatings{ 
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -81,10 +76,9 @@ html, body {
   height: 27px;
   color: #5F5F5F;
   height: 27px;
-
 }
 
-.userRatings p{
+.userRatings p{ 
   font-family: Barlow;
   font-weight: 400;
   font-size: 16px !important;
@@ -97,14 +91,11 @@ html, body {
   margin-top: 0px;
 }
 
-.userRatings p:first-of-type{
-  margin-right: 60px;
-}
-
-.order-form-container {
-  max-width: 532px;
-  margin: 0 auto;
-  padding: 20px;
+.product-info p{
+  text-align: left;
+  font-family: Barlow;
+  font-size: 16px;
+  line-height: 28.8px;
 }
 
 .sizeAndDoughFormGroup{
@@ -113,6 +104,12 @@ html, body {
   width: 427.88px;  
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.sizeFormGroup{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .sizeFormGroup label:first-of-type{
@@ -128,6 +125,12 @@ html, body {
   color: red;
 }
 
+.doughFormGroup{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .doughFormGroup label:first-of-type{
   font-family: Barlow;
   font-weight: 600;
@@ -140,19 +143,6 @@ html, body {
   color: red;
 }
 
-.sizeFormGroup{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.doughFormGroup{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content:flex-start;
-}
-
 .doughFormGroup select{
   border-radius: 5px;
   width: 158px !important;
@@ -160,17 +150,8 @@ html, body {
   padding: 0px !important;
 }
 
-.infoExtras label:first-of-type b{
-  font-family: Barlow;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24.76px;
-  letter-spacing: 0%;
-  vertical-align: middle;
-}
-
-.infoExtras label:first-of-type{
-  margin-bottom: -15px;
+.extrasFormGroup{
+  margin-bottom: 40px;
 }
 
 .infoExtras{
@@ -181,6 +162,18 @@ html, body {
   height: 81px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.infoExtras label:first-of-type strong{
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24.76px;
+  vertical-align: middle;
+}
+
+.infoExtras label:first-of-type{
+  margin-bottom: -15px;
 }
 
 .toppings{
@@ -202,10 +195,6 @@ html, body {
   vertical-align: middle;
   margin: 6.5px 0px 6.5px 0px ;
   color: #5F5F5F;
-}
-
-.extrasFormGroup{
-  margin-bottom: 40px;
 }
 
 .nameFormGroup{
@@ -251,18 +240,6 @@ hr{
   margin-bottom: 40px;
 }
 
-.order-form-container header {
-  background-color: #d32f2f;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-.order-form-container form {
-  background-color: white;
-  border-radius: 8px;
-}
-
 .order-form-container form div {
   margin-bottom: 20px;
 }
@@ -296,6 +273,12 @@ hr{
   color: #292929;
 }
 
+.orderSummaryFormGroup{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .quantityControlsFormGroup {
   display: flex;
   align-items: center;
@@ -327,12 +310,6 @@ hr{
 
 .decrease{
   border-radius: 6px 0px 0px 6px !important;
-}
-
-.orderSummaryFormGroup{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .formSummary{
@@ -371,7 +348,7 @@ hr{
   margin-top: 18px;
 }
 
-.formSummary p{
+.priceSummary p{
   margin: 6px 0px 6px 0px;
 }
 
@@ -396,6 +373,7 @@ hr{
   color: #CE2829;
 }
 
+/*Responsive*/
 @media (max-width: 768px) {
   .order-form-container {
     padding: 10px;
