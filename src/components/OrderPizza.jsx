@@ -30,27 +30,31 @@ function OrderPizza({ navigateTo, setOrderData }) {
           setFormData({
             ...formData,
             toppings: [...formData.toppings, value]
-          });
-        }
-      } else {
+          }); 
+      } /*Checkbox işaretlendiyse ve toplam işaretli olanlar 10'dan az ise toppings array'ine işaretleneni ekliyor.*/
+    }
+
+      else {
         setFormData({
           ...formData,
           toppings: formData.toppings.filter(t => t !== value)
         });
-      }
-    } else {
+      } /*Checkbox işareti kaldırıldıysa filter sayesinde toppings içinde value aranır bulunursa array'den atılır.*/
+    } 
+
+    else {
       setFormData({
         ...formData,
-        [name]: value
+        [name]: value 
       });
-    }
+    } /*Diğer inputlar(checkbox hariç) için name ile eşleşen alanın değerini value ile güncelliyor.*/
   };
 
   const handleQuantityChange = (increment) => {
     setFormData({
       ...formData,
       quantity: Math.max(1, formData.quantity + increment)
-    });
+    }); /*Kod içerisinde butonlarda pizza adetini arttırmak ya da azaltmak için kullanacağımız fonksiyon.*/
   };
 
   const isFormValid = () => {
@@ -60,22 +64,24 @@ function OrderPizza({ navigateTo, setOrderData }) {
       formData.dough !== '' &&
       formData.toppings.length >= 4 &&
       formData.toppings.length <= 10
-    );
+    ); /*Form doldurulduktan sonra bizim belirlediğimiz sipariş verme şartlarının sağlanma durumunu kontrol eder.*/
   };
 
   const calculateTotal = () => {
     return (basePrice + (formData.toppings.length * toppingPrice)) * formData.quantity;
-  };
+  }; /*Ücret hesaplaması.*/
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); /*Sayfanın yenilenmesinin ve form hareketinin önüne geçiyor.*/
     if (!isFormValid()) {
-      return;
+      return; /*Form gönderilme şartlarını karşılamıyorsa burayı çalıştır. Aşağıda "bu if çalışırsa buton kullanım dışı olsun diyeceğiz." */
     }
 
+    console.log(formData); /*Olası bir hataya karşılık formData'yı console'da görmek için. */
+    
     axios.post("https://reqres.in/api/pizza", formData)
       .then((response) => {
-        console.log("Sipariş Başarılı:", response.data);
+                console.log("Sipariş Başarılı:", response.data);
         setOrderData(response.data);
         navigateTo('success');
       })
