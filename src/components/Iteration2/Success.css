@@ -1,0 +1,21 @@
+.success-container{
+    width: 100vw;
+    height: 100vh;
+    background: #CE2829;
+    justify-content: space-around;
+}
+
+.elementLogo{
+    padding-top: 149px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.elementMessage{
+    margin-top: 266.21px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

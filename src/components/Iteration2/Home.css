@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #CE2829;
+  background-image: url('/images/iteration-1-images/home-banner.png');
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Barlow', sans-serif;
+}
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;  
+}
+
+.elements{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 106.99px;
+}
+
+.home-content {
+  position: absolute;
+  top: 18%; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.logo {
+  width: 361px;
+  margin-bottom: -35px;
+  margin-top: 10px;
+  padding: 0px;
+
+}
+
+.hero-title {
+  font-family: Roboto Condensed;
+  font-weight: 300;
+  font-size: 86px;
+  line-height: 92px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+
+}
+
+.order-button {
+  font-family: 'Barlow', sans-serif;
+  background-color: #FDC913;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 193.265625px;
+  height: 56px;
+
+}
+
+.order-button:hover {
+  background-color: #e6b800;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    background-attachment: scroll;
+    background-size:unset;
+    background-position:top center;
+  }
+
+  .elements{
+    
+  }
+
+  .home-content {
+    top: 12%;
+    padding: 0 16px;
+  }
+
+  .logo {
+    width: 361.93;
+    margin-bottom: -55px;
+  }
+
+  .hero-title {
+    font-family: Roboto Condensed;
+    font-weight: 300;
+    font-size: 86px;
+    line-height: 92px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+  }
+
+  .order-button {
+    width: 153.27px;
+    font-size: 16px;
+    padding: 10px 0;
+    border-radius: 40px;
+  }
+}
