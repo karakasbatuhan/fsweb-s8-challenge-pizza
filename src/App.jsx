@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 
-import Home from './components/Iteration1/Home';
-import OrderPizza from './components/Iteration1/OrderPizza';
-import Success from './components/Iteration1/Success';
+import Home from './components/Iteration2/Home';
+import OrderPizza from './components/Iteration2/OrderPizza';
+import Success from './components/Iteration2/Success';
 
 function App() {
   //currentPage state

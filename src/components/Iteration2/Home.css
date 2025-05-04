@@ -3,48 +3,63 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background-color: #CE2829;
-  background-image: url('/images/iteration-1-images/home-banner.png');
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Barlow', sans-serif;
+  background-color: #CE2829;  
 }
 
-.home-container {
+.mainScreen{
   width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;  
+  height: 1080px;
+  background-image: url('/images/iteration-1-images/home-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.elements{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 106.99px;
-}
-
-.home-content {
-  position: absolute;
-  top: 18%; 
-  left: 50%;
-  transform: translateX(-50%);
+.teknolojikYemekler{
+  top: 56px;
+  left: 778px;
+  font-family: Londrina Solid;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0%;
   text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 53px;
 }
 
-.logo {
-  width: 361px;
-  margin-bottom: -35px;
-  margin-top: 10px;
-  padding: 0px;
+.opportunity{
+  font-family: Satisfy;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44.27px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #FDC913;
+  margin-bottom: 0px;
+}
+
+.order-button{
+  width: 193.265625px;
+  height: 56px;
+  border-radius: 50px;
+  background-color: #FDC913;
+  margin-top: 13.27px;
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 
 }
 
-.hero-title {
-  font-family: Roboto Condensed;
+.hero-title{
+  font-family: 'Roboto Condensed';
   font-weight: 300;
   font-size: 86px;
   line-height: 92px;
@@ -53,68 +68,641 @@ html, body {
   vertical-align: middle;
   text-transform: uppercase;
   color: #FFFFFF;
-
-
+  margin: 0px;
 }
 
-.order-button {
+.shortcutMenu{
+  background-color: #FFFFFF !important;  
+  width: 100%;
+  height: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortcutMenuButtons{
+  display: flex;
+  flex-direction: row;
+  width: 1068px;
+  justify-content: space-between;
+}
+
+.shortcutMenuButtons button{
+  background-color: #FFFFFF;
+  padding: 0px;  
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  font-size: 18px !important;
+  font-weight: 500;
+  font-family: 'Barlow', sans-serif;  
+  line-height: 32.4px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #292929;
+  border: 0px;
+}
+
+.shortcutMenuButtons button:hover{
+  border: 0px;
+}
+
+.shortcutMenuButtons img{
+  padding-right: 16px;
+}
+
+.midPartPage{
+  background-color: #FAF7F2;
+  width: 100%;
+  height: 1301px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opportunitiesMenus{
+  width: 1072px;
+  height: 449px;
+  display: flex;
+  flex-direction: row;
+}
+
+.opportunitiesFirst{
+  width: 531px;
+  height: 448.75px;
+  background-image: url('/images/iteration-2-images/cta/kart-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  
+}
+
+.opportunitiesFirstElements{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 29px;
+}
+
+.opportunitiesFirstElements h3{
+  width: 288.18438720703125px;
+  height: 148px;
+  font-family: 'Quattrocento';
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 72px;
+  vertical-align: middle;
+  text-align: left;
+  color: #FFFFFF;
+  margin-top: 41.91px;
+  margin-bottom: 5.84px;
+}
+
+.opportunitiesFirstElements p{
+  width: 275px;
+  height: 27px;
+  top: 151.75px;
+  left: -10px;
   font-family: 'Barlow', sans-serif;
-  background-color: #FDC913;
-  color: black;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 40px;
-  font-size: 18px;
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 193.265625px;
-  height: 56px;
+  font-size: 20px;
+  line-height: 26.76px;
+  vertical-align: middle;
+  color: #FFFFFF;
+  margin: 0px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.lezzetus-order-button{
+  width: 138px;
+  height: 48px;
+  top: 203.75px;
+  left: -10px;
+  border-radius: 50px;
+  font-family: 'Barlow';
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #CE2829;
+  border: 0px;
+}
+
+.opportunitiesMenuRight{
+  display: flex;
+  flex-direction: column;
+  margin-left: 11px;
+}
+
+.opportunitiesSecond{
+  width: 530px;
+  height: 220px;
+  background-image: url('/images/iteration-2-images/cta/kart-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+.opportunitiesSecondElements{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 182.35px;
+  height: 163px;
+  color: white;
+  margin-top: 28.5px;
+  margin-left: 32px;
+}
+
+.opportunitiesSecondElements h3{
+  font-family: 'Barlow',sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44.27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 29px;
+}
+
+.hackhathlon-order-button{
+  width: 138px;
+  height: 48px;
+  top: 143.5px;
+  left: 32px;
+  border-radius: 50px;
+  font-family: 'Barlow';
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #CE2829;  
+  border: none;
+}
+
+.opportunitiesThird{
+  width: 530px;
+  height: 220px;
+  background-image: url('/images/iteration-2-images/cta/kart-3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  margin-top: 9px;
+}
+
+.opportunitiesThirdElements{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 212px;
+  height: 161px;
+  color: white;
+  margin-top: 29.5px;
+  margin-left: 32px;
+}
+
+.opportunitiesThirdElements h3{
+  width: 263.61px;
+  height: 88.53px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44.27px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-align: left;
+  margin: 0px;
+  color: black;
+  margin-bottom: 24.94px;
+}
+
+.opportunitiesThirdElements h3 span{
+  color:#CE2829;
+}
+
+.opportunitiesThirdElements button{
+  width: 138px;
+  height: 48px;
+  top: 143.5px;
+  left: 32px;
+  border-radius: 50px;
+  font-family: 'Barlow';
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #CE2829;  
+  border: none;
+}
+
+.slogans{
+  width: 1296px;
+  height: 110.45px;
+  margin-top: 64px
+}
+
+.slogans h2:first-of-type{
+  font-family: Satisfy !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44.27px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #CE2829;
+}
+
+.slogans h2{
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 56.2px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.middleMenu{
+  width: 1068px;
+  margin-top: 16.55px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.middleMenu button{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 66px;
+  gap: 10px;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  border-radius: 50px;
+  background-color: white;
+  border: 0px;
+}
+
+.middleMenu button:hover{
+  background-color: #292929;
+  color: #FFFFFF;
+  border: 0px;
+}
+
+.recommendedFoods{
+  width: 1068px;
+  height: 430px;
+  margin-top: 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommendedFirst{
+  width: 334.6666564941406px;
+  height: 419px;
+  justify-content: space-between;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.recommendedFirst img{
+  width: 270.6666564941406px;
+  height: 265px;
+  margin-top: 32px;
+}
+
+.recommendedFirstInformations{
+  width: 270.67px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 24px 0px 0px 32px;
+}
+
+.recommendedFirstInformations h4{
+  margin: 0px;
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29.44px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.recommendedFirstNumbers{
+  display: flex;
+  flex-direction: row;
+}
+
+.reccomendedFirstPrice{
+  width: 126.53px;
+  height: 29px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 121.14px;
+}
+
+.recommendedSecond{
+  width: 334.6666564941406px;
+  height: 419px;
+  justify-content: space-between;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.recommendedSecond img{
+  width: 270.6666564941406px;
+  height: 265px;
+  margin-top: 32px;
+}
+
+.recommendedSecondInformations{
+  width: 270.67px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 24px 0px 0px 32px;
+}
+
+.recommendedSecondInformations h4{
+  margin: 0px;
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29.44px;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
 }
 
-.order-button:hover {
-  background-color: #e6b800;
+.recommendedSecondNumbers{
+  display: flex;
+  flex-direction: row;
 }
 
-@media (max-width: 768px) {
-  html, body {
-    background-attachment: scroll;
-    background-size:unset;
-    background-position:top center;
-  }
+.reccomendedSecondPrice{
+  width: 126.53px;
+  height: 29px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 121.14px;
+}
 
-  .elements{
-    
-  }
+.recommendedThird{
+  width: 334.6666564941406px;
+  height: 419px;
+  justify-content: space-between;
+  border-radius: 12px;
+  background-color: white;
+}
 
-  .home-content {
-    top: 12%;
-    padding: 0 16px;
-  }
+.recommendedThird img{
+  width: 270.6666564941406px;
+  height: 265px;
+  margin-top: 32px;
+}
 
-  .logo {
-    width: 361.93;
-    margin-bottom: -55px;
-  }
+.recommendedThirdInformations{
+  width: 270.67px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 24px 0px 0px 32px;
+}
 
-  .hero-title {
-    font-family: Roboto Condensed;
-    font-weight: 300;
-    font-size: 86px;
-    line-height: 92px;
-    letter-spacing: 1.5px;
-    text-align: center;
-    vertical-align: middle;
-    text-transform: uppercase;
-    margin-bottom: 25px;
+.recommendedThirdInformations h4{
+  margin: 0px;
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29.44px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
 
-  }
+.recommendedThirdNumbers{
+  display: flex;
+  flex-direction: row;
+}
 
-  .order-button {
-    width: 153.27px;
-    font-size: 16px;
-    padding: 10px 0;
-    border-radius: 40px;
-  }
+.reccomendedThirdPrice{
+  width: 126.53px;
+  height: 29px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 121.14px;
+}
+
+.footerPart{
+  background-color: #1A1A1A;
+  width: 100%;
+  height: 561.25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.footerTop{
+  display: flex;
+  margin-top: 58px;
+}
+
+.footerTopInfos{
+  width: 663px;
+  height: 390.37px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footerTopInfosLeft{
+  width: 306px;
+  height: 314.06px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 51px;
+}
+
+.footerTopInfosLeft h3{
+  font-family: Londrina Solid;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0%;
+  vertical-align: left;
+  text-transform: capitalize;
+  margin: 0px 0px 40.50px 0px;
+  text-align: left;
+}
+
+.footerTopInfosLeft ul{
+  list-style-type: none;
+  padding: 0px;
+  text-align: left;
+  margin: 0px;
+}
+
+.footerTopInfosLeft ul li{
+  padding: 0px;
+}
+
+.footerTopInfosLeft li{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 66px;
+  gap: 10px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  border: 0px;
+}
+
+.footerTopInfosLeft a{
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+  letter-spacing: 0%;
+  vertical-align: middle; 
+  color: #FFFFFF;
+}
+
+.footerTopInfosLeft a:hover{
+  color: inherit;
+}
+
+.footerTopInfosRight{
+  width: 306px;
+  height: 321.45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.footerTopInfosRight h3{
+  margin-bottom: 26.09px;
+  font-family: 'Barlow',sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.11px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+.footerTopInfosRight ul{
+  list-style-type: none;
+  padding: 0px;
+  text-align: left;
+  margin: 0px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 221px;
+  height: 242.34px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+.footerTopInfosRight a{
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.footerTopInfosRight a:hover{
+  color: inherit;
+}
+
+.footerTopInstagram{
+  width: 347px;
+  height: 332px;
+  margin-top: 30px;
+}
+
+.footerTopInstagram h3{
+  font-family: Barlow;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.11px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.instagramPhotos{
+  width: 347px;
+  height: 222px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.instagramPhotos img{
+  width: 105px;
+  height: 105px;
+  margin: 0px;
+}
+
+.footerBottom{
+  width: 100%;
+  height: 89.796875px;
+  border-top-width: 1px;
+  border: 1px solid #FFFFFF26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogos{
+  width: 1034.58px;
+  height: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 50px;
+}
+
+.footerLogos p{
+  margin: 0px;
+}
+
+.fa-twitter{
+ color: white;
 }
